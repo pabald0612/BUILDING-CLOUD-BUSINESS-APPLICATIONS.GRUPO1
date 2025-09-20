@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Arquitectura iStore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0078D4;
+    }
+
+    .diagram {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .layer {
+      width: 80%;
+      background-color: #fff;
+      border: 2px solid #0078D4;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .layer:hover {
+      transform: scale(1.05);
+    }
+
+    .layer h2 {
+      color: #0078D4;
+      margin-bottom: 10px;
+    }
+
+    .arrow {
+      font-size: 2em;
+      color: #0078D4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Arquitectura del Proyecto iStore</h1>
+
+  <div class="diagram">
+    <div class="layer">
+      <h2>Data Sources</h2>
+      <p>Excel y sistemas de escritorio, registros de Power Apps.</p>
+    </div>
+    <div class="arrow">⬇️</div>
+
+    <div class="layer">
+      <h2>Data Layer</h2>
+      <p>Base de datos Azure SQL con tablas: Ventas, Clientes, Sedes, Modelo, Buyback, Método de Pago.</p>
+    </div>
+    <div class="arrow">⬇️</div>
+
+    <div class="layer">
+      <h2>ETL Layer</h2>
+      <p>Pipelines y Dataflows de Microsoft Fabric + Notebooks Python para automatización y notificaciones.</p>
+    </div>
+    <div class="arrow">⬇️</div>
+
+    <div class="layer">
+      <h2>Data Warehouse Layer</h2>
+      <p>Fabric Data Warehouse, medidas calculadas, relaciones y tabla calendario para análisis.</p>
+    </div>
+    <div class="arrow">⬇️</div>
+
+    <div class="layer">
+      <h2>Application Layer</h2>
+      <p>Power Apps: Pantallas de Inicio, Ventas, Clientes, Sedes, Buyback, Método de Pago.</p>
+    </div>
+    <div class="arrow">⬇️</div>
+
+    <div class="layer">
+      <h2>Presentation Layer</h2>
+      <p>Power BI y Excel: reportes interactivos y dashboards ejecutivos.</p>
+    </div>
+    <div class="arrow">⬇️</div>
+
+    <div class="layer">
+      <h2>User Access</h2>
+      <p>Roles y permisos en Azure, notificaciones automáticas por correo.</p>
+    </div>
+  </div>
+
+</body>
+</html>
