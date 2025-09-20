@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Arquitectura iStore - GitHub Pages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #004aad;
+      margin-bottom: 40px;
+    }
+
+    .layer {
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+
+    .layer:hover {
+      transform: scale(1.03);
+    }
+
+    .layer h2 {
+      margin-top: 0;
+    }
+
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .images img {
+      max-width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .arrow {
+      text-align: center;
+      font-size: 2em;
+      margin: 10px 0;
+      color: #004aad;
+    }
+
+    /* Colores por capa */
+    .extraccion { background-color: #f39c12; }
+    .almacenamiento { background-color: #16a085; }
+    .aplicacion { background-color: #2980b9; }
+    .datos { background-color: #8e44ad; }
+    .presentacion { background-color: #c0392b; }
+
+    .diagram {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .diagram img {
+      max-width: 90%;
+      border: 3px solid #004aad;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Arquitectura del Proyecto iStore</h1>
+
+  <!-- Capa de Extracción -->
+  <div class="layer extraccion">
+    <h2>Capa de Extracción</h2>
+    <p>Procesos ETL para extraer datos de Excel, sistemas de escritorio y Power Apps.</p>
+    <div class="images">
+      <img src="capa_extraccion/imagen1.png" alt="Extracción 1">
+      <img src="capa_extraccion/imagen2.png" alt="Extracción 2">
+    </div>
+  </div>
+
+  <div class="arrow">⬇️</div>
+
+  <!-- Capa de Almacenamiento de Datos -->
+  <div class="layer almacenamiento">
+    <h2>Capa de Almacenamiento de Datos</h2>
+    <p>Base de datos Azure SQL para centralizar y organizar la información.</p>
+    <div class="images">
+      <img src="capa_almacenamiento/imagen1.png" alt="Almacenamiento 1">
+      <img src="capa_almacenamiento/imagen2.png" alt="Almacenamiento 2">
+    </div>
+  </div>
+
+  <div class="arrow">⬇️</div>
+
+  <!-- Capa de Aplicación -->
+  <div class="layer aplicacion">
+    <h2>Capa de Aplicación</h2>
+    <p>Interfaz de usuario con Power Apps para registrar y gestionar datos.</p>
+    <div class="images">
+      <img src="capa_aplicacion/imagen1.png" alt="Aplicación 1">
+      <img src="capa_aplicacion/imagen2.png" alt="Aplicación 2">
+    </div>
+  </div>
+
+  <div class="arrow">⬇️</div>
+
+  <!-- Capa de Datos -->
+  <div class="layer datos">
+    <h2>Capa de Datos</h2>
+    <p>Tablas normalizadas: Ventas, Clientes, Sedes, Modelo, Buyback y Método de Pago.</p>
+    <div class="images">
+      <img src="capa_datos/imagen1.png" alt="Datos 1">
+      <img src="capa_datos/imagen2.png" alt="Datos 2">
+    </div>
+  </div>
+
+  <div class="arrow">⬇️</div>
+
+  <!-- Capa de Presentación -->
+  <div class="layer presentacion">
+    <h2>Capa de Presentación</h2>
+    <p>Dashboards interactivos en Power BI y reportes en Excel para toma de decisiones.</p>
+    <div class="images">
+      <img src="capa_presentacion/imagen1.png" alt="Presentación 1">
+      <img src="capa_presentacion/imagen2.png" alt="Presentación 2">
+    </div>
+  </div>
+
+  <!-- Diagrama General -->
+  <div class="diagram">
+    <h2>Diagrama General de la Estructura</h2>
+    <img src="diagrama_general.png" alt="Diagrama General">
+  </div>
+
+</body>
+</html>
